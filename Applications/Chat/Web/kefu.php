@@ -101,6 +101,7 @@
 	color:#fff;
 	display:none;
 }
+.current{background-color:green}
 </style>
 
 <body onload="connect();">
