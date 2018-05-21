@@ -148,7 +148,7 @@ function flush_client_list(){
 	var content=$(".content"),list=$('.kehulist ul'),chat=$('#000000'),str="";
 	list.html("");
 	for(var p in client_list){
-		list.append('<li attr="'+p+'">'+p+'<span class="circle">0</span></li>');
+		list.append('<li attr="'+p+'">'+client_list[p]+'<span class="circle">0</span></li>');
 		str='<div class="chat" id="'+p+'">'
 		str+=chat.html();
 		str+='</div>'
@@ -167,10 +167,11 @@ function flush_client_list(){
 //添加新的客户
 function add_client_list(id,value){
 	var content=$(".content"),list=$('.kehulist ul'),chat=$('#000000'),str="";
-	list.append('<li attr="'+p+'">'+p+'<span class="circle">0</span></li>');
+	list.append('<li attr="'+id+'">'+value+'<span class="circle">0</span></li>');
 	str='<div class="chat" id="'+id+'">'
 	str+=chat.html();
 	str+='</div>'
+	content.append(str);
 }
 
 //断开链接时操作
